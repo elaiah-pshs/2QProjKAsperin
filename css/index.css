@@ -1,0 +1,189 @@
+/*
+Author: Elaiah S. Asperin
+Created: 21 December 2021
+Last Modified: 16 January 2022
+Description: General stylsheet for "AI: The Inner Workings"
+*/
+
+
+/* ========================================================================= */
+
+
+/* Imported Styles */
+
+@import "navbar.css";
+@import "page-header.css";
+@import "cards.css";
+@import "myth.css";
+@import "content.css";
+@import "wrap-up.css";
+@import "page-footer.css";
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap');
+
+
+/* ========================================================================= */
+
+
+/* General Styles */
+
+:root {
+    font-size: 16px;
+    font-family: "Century Gothic", "Verdana", sans-serif;
+    color: var(--text-primary);
+    scroll-behavior: smooth;
+
+    --text-primary: rgb(236, 236, 236);
+    --text-secondary: rgb(182, 182, 182);
+    --text-gradient: linear-gradient(90deg, #26AFD9, #094978);
+    --bg-primary: rgb(6, 50, 81);
+    --bg-secondary: rgb(9, 73, 120);
+    --transition-speed: 500ms;
+}
+
+body {
+    background-color: rgb(10, 20, 31);
+
+    margin: 0px;
+    padding: 0px;
+
+    overflow-x: hidden;
+}
+
+main {
+    /* To make space for the navigation bar */
+    margin-left: 5rem;
+    padding: 1rem;
+}
+
+h1, h2, h3 {
+    font-family: "Roboto Mono", "Cascadia Code ExtraLight", monospace;
+}
+
+.transition {
+    background-color: white;
+    box-sizing: border-box;
+
+    width: calc(100% - 200px);
+    height: 6px;
+
+    margin: 3rem auto;
+    border: 1px solid white;
+    border-radius: 3px;
+}
+
+#return {
+    display: block;
+
+    width: 3rem;
+    height: 3rem;
+
+    margin-left: auto;
+
+    position: sticky;
+    top: 2rem;
+    z-index: 1;
+}
+
+#return img {
+    display: block;
+
+    width: 2rem;
+    height: 2rem;
+
+    margin-left: 1rem;
+
+    border-radius: 50%;
+}
+
+main a:link, main a:visited {
+    color: var(--text-primary);
+    text-decoration: none;
+}
+
+article a:link, article a:visited {
+    transition: var(--transition-speed);
+}
+
+main a:hover, main a:active {
+    color: #A3E3F3;
+    text-decoration: none;
+}
+
+
+/* ========================================================================= */
+
+
+/* Scrollbar Styles */
+
+body::-webkit-scrollbar {
+    width: 0.5rem;
+}
+
+#cards::-webkit-scrollbar {
+    height: 0.5rem;
+}
+
+::-webkit-scrollbar-track {
+    /* To make the track invisible */
+    background-color: rgba(0, 0, 0, 0);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--bg-primary);
+    border-radius: 0.25rem;
+}
+
+
+/* ========================================================================= */
+
+
+/* Media Queries */
+
+/* For small screens */
+@media only screen and (max-width: 640px) {
+    /* Removes the scrollbar */
+    body {
+        -ms-overflow-style: none;   /* Internet Explorer 10+ */
+        scrollbar-width: none;      /* Firefox */
+    }
+
+    body::-webkit-scrollbar { 
+        display: none;              /* Safari and Chrome */
+    }
+
+    /* Transfers the margin of main from the left to the bottom */
+    main {
+        margin: 0px 0px 5rem 0px;
+    }
+}
+
+/* For extremely small screens */
+@media only screen and (max-width: 480px) {
+    /* Transfers the margin of main from the left to the bottom */
+    main {
+        margin: 0px 0px 3rem 0px;
+    }
+
+    *:not(h1, h2, h3) {
+        font-size: 0.75rem;
+    }
+}
+
+/* For short screens */
+@media only screen and (max-height: 576px) {
+    /* Removes the scrollbar */
+    body {
+        -ms-overflow-style: none;   /* Internet Explorer 10+ */
+        scrollbar-width: none;      /* Firefox */
+    }
+
+    body::-webkit-scrollbar { 
+        display: none;              /* Safari and Chrome */
+    }
+
+    /* Transfers the margin of main from the left to the bottom */
+    main {
+        margin: 0px 0px 3rem 0px;
+    }
+}

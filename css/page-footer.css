@@ -1,0 +1,79 @@
+/*
+Author: Elaiah S. Asperin
+Created: 21 December 2021
+Last Modified: 16 January 2021
+Description: Footer stylesheet for "AI: The Inner Workings"
+*/
+
+
+/* ========================================================================= */
+
+
+/* General Styles */
+
+#page-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background-color: rgb(7, 30, 61);
+
+    box-sizing: border-box;
+    width: 100%;
+    height: auto;
+
+    padding: 1rem 2rem;
+    margin-top: 2rem;
+}
+
+#page-footer > a {
+    display: flex;
+    align-items: center;
+    transition: var(--transition-speed);
+}
+
+#page-footer img {
+    width: 2rem;
+    height: 2rem;
+
+    margin-right: 1rem;
+    border-radius: 50%;
+}
+
+#page-footer section {
+    display: flex;
+}
+
+#page-footer section a {
+    background: url("../images/sprite.svg") no-repeat;
+    background-size: 12.5rem 2.5rem;
+
+    width: 2.5rem;
+    height: 2.5rem;
+
+    transition: var(--transition-speed);
+}
+
+#page-footer section a:hover {
+    transform: translateY(-0.25rem);
+}
+
+#page-footer section a:nth-child(2) {
+    background-position: -2.5rem 0px;
+}
+
+#page-footer section a:nth-child(3) {
+    background-position: -5rem 0px;
+}
+
+#page-footer section a:nth-child(4) {
+    background-position: -7.5rem 0px;
+}
+
+#page-footer section a:nth-child(5) {
+    background-position: -10rem 0px;
+}
+
+#page-footer p {
+    font-size: 0.75rem;
+}
